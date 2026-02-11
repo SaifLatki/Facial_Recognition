@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_available_if.py", line 32, in _check
+    check_result = self.check(obj)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\svm\_base.py", line 831, in _check_proba
+    raise AttributeError(
+AttributeError: predict_proba is not available when probability=False
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\Facial_Recognition\src\app.py", line 163, in predict
+    confidence = float(np.max(model.predict_proba(processed_img)) * 100)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_available_if.py", line 43, in __get__
+    self._check(obj, owner=owner)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python310\lib\site-packages\sklearn\utils\_available_if.py", line 34, in _check
+    raise AttributeError(attr_err_msg) from e
+AttributeError: This 'SVC' has no attribute 'predict_proba'
